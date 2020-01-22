@@ -1,0 +1,26 @@
+{% extends "blog/base.html" %}  
+  
+{% block title %}Поделиться{% endblock %}
+
+{% block content %}   
+  {% if sent %}  
+    <h3>Пост был отправлен</h3>  
+    <p>  
+      "{{ post.title }}" был отправлен {{ form.cleaned_data.to }}.  
+    </p>  
+  {% else %}  
+    <h3>Поделиться "{{ post.title }}"</h3>  
+    <div class="email"> <form action="." method="post">  
+     <table> {{ form.as_table }}  </table>
+      {% csrf_token %}  
+      <input type="submit" class="otp" value="Отправить">  
+    </form>  </div>
+  {% endif %}  
+    <a href="#" title="Вернуться к началу страницы" class="topNubex">Вверх</a>
+
+{% endblock %}
+
+{% block sidebar %}
+  <p><input type="button" class="btn1" onclick="history.back();" value="Назад"/></p>
+  <p><input type="button" class="btn2" onclick="location.href = 'http://127.0.0.1:8000/blog/'" value="На главную"/></p>
+{% endblock %}

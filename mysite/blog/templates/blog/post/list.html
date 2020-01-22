@@ -1,0 +1,43 @@
+{% extends "blog/base.html" %}  
+ 
+{% block title %}Krasotka{% endblock %}
+ 
+{% block content %}  
+  {% if tag %}  
+    <h3>Все посты по тегу "{{ tag.name }}"</h3>  
+  {% endif %}
+  {% for post in posts %}  
+    <h2>  
+      <a href="{{ post.get_absolute_url }}">  
+        {{ post.title }}  
+      </a>  
+    </h2> 
+    <small>
+      <i class="glyphicon glyphicon-time">  
+        Опубликовано {{ post.publish }} 
+      </i>&nbsp;&nbsp;&nbsp;     
+      <i class="glyphicon glyphicon-tags">
+        Теги:
+        {% for tag in post.tags.all %}  
+          <a href="{% url 'blog:post_list_by_tag' tag.slug %}">  
+            {{ tag.name }}  
+          </a>
+          {% if not forloop.last %}, {% endif %}
+        {% endfor %}  
+      </i>&nbsp;&nbsp;&nbsp; 
+    </small>
+    <p> 
+      {% autoescape off %}
+      {{ post.body|truncatewords:30|linebreaks }}  
+      {% endautoescape %}
+    </p>  
+  {% endfor %}
+  <a href="#" title="Вернуться к началу страницы" class="topNubex">Вверх</a>
+  {% include "../pagination.html" with page=posts %} 
+{% endblock %}
+
+{% block sidebar %}  
+  {% if tag %}
+  <p><input type="button" class="btn2" onclick="location.href = 'http://127.0.0.1:8000/blog/'" value="На главную"/></p>
+  {% endif %}
+{% endblock %}

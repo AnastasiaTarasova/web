@@ -1,0 +1,100 @@
+
+html {
+     background-color: #EDE1E9;
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+  color: #7C0505;
+  text-align: center;
+  border-bottom: 2px solid black;
+  background-color: #EDE1E9;
+} 
+
+#title {
+      background-color: #EDE1E9;
+}
+
+.btn1, .btn2 {
+    background-color: #7C0505;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn3, .otp{
+    border: 2px solid #7C0505;
+    color: #7C0505;
+    padding: 5px 5px;
+    font-size: 13px;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: white;
+    font-family:verdana;
+
+}
+
+.share{
+    border: 2px solid #7C0505;
+    color: #7C0505; 
+    padding: 5px 5px; 
+    font-size: 13px; 
+    cursor: pointer; 
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: white;
+    font-family:verdana;
+
+}
+
+.menu, .menu1{
+    text-align: center;
+}
+
+.poho{
+    border-top: 4px double black; /* Параметры границы */
+}
+
+
+
+.topNubex {
+    position: fixed;
+    right: 45px;
+    bottom: 45px;
+    background-color: #7C0505;
+    color: white;
+    padding: 12px 16px;
+    cursor: pointer;
+    border: none;
+    font-family:verdana;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+   }
+
+img {
+  width: 100%;
+  height: 10%;
+}
+
+#content {
+    background-color: #EDE1E9;
+    float: right;
+    overflow: hidden;
+    width: 80%;
+    padding: 0px 20px 0;
+    height: 100%;
+}
+
+#sidebar {
+    background-color: #EDE1E9;
+    float: left;
+    width: 20%;
+    height: 100%;
+    border-right: 2px double black ;   
+
+}
+
